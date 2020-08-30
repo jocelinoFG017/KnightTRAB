@@ -14,6 +14,10 @@ namespace App\Controllers;
 
 			return view('formulario');
 		}
+		function sobre(){
+
+			return view('sobre');
+		}
 		function gravar(){
 			$modelo = new \App\Models\SaintModel();
 

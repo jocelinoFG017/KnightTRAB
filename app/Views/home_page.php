@@ -30,12 +30,17 @@
                 <ul class="tabs tabs-transparent">
                     <li class="tab"><a href="saint">Personagens</a></li>
                     <li class="tab"><a class="active" href="<?=base_url('saint/formulario')?>">Cadastro</a></li>
+                    <li class="tab"><a class="active" href="<?=base_url('saint/sobre')?>">Sobre</a></li>
                 </ul>
             </div>
         </nav>
 
         <ul class="sidenav" id="mobile-demo">
-            <li><a href="saint">Personagens</a></li>
+            <li class="tab"><a href="saint">Personagens</a></li>
+            <li class="tab"><a class="active" href="<?=base_url('saint/formulario')?>">Cadastro</a></li>
+            <li class="tab"><a class="active" href="<?=base_url('saint/sobre')?>">Sobre</a></li>
+            <img src="images/uni.jpg" style="width: 100%; height: 80%; position: absolute;" />
+            
         </ul>
         <img src="images/img2.jpg" style="width: 100%; height: 100%;" />
     </body>
