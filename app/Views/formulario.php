@@ -20,27 +20,30 @@
 	</head>
 		
 	<body>		
-	  <nav>
-	    <div class="nav-wrapper container">
-	      <a href="#" class="brand-logo">CodeIgniter</a>
-	      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-	      <ul id="nav-mobile" class="right hide-on-med-and-down">
-	        <li><a href="<?=base_url('veiculo')?>">Veiculo</a></li>
-	      </ul>
-	    </div>
-	  </nav>
+ <nav class="nav-extended black">
+            <div class="nav-wrapper">
+                <a href="<?=base_url('home')?>" class="brand-logo center">Saint Seiya: Knights of the Zodiac</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            </div>
 
+            <div class="nav-content">
+                <ul class="tabs tabs-transparent">
+                    <li class="tab"><a href="<?=base_url('saint')?>">Personagens</a></li>
+                    <li class="tab"><a class="active" href="<?=base_url('saint/formulario')?>">Cadastro</a></li>
+                </ul>
+            </div>
+        </nav>
 	  <ul class="sidenav" id="mobile-demo">
-	    <li><a href="<?=base_url('veiculo')?>">Veiculo</a></li>
+	    <li><a href="<?=base_url('saint')?>">Personagens</a></li>
 	  </ul>
         <div class="container">
-        <h3>Cadastro de Veiculos</h3>
+        <h3>Cadastro de Personagens</h3>
 
         <form method="post" action="gravar">
           <div class="row">
             <div class="input-field col s6">
-              <input id="txtPlaca" type="text" name ="placa" class="validate">
-              <label class="active" for="txtPlaca">Placa</label>
+              <input id="txtNome" type="text" name ="nome" class="validate">
+              <label class="active" for="txtNome">Nome</label>
             </div>
           </div>
 
@@ -52,8 +55,20 @@
           </div>
           <div class="row">
             <div class="input-field col s6">
-              <input id="txtAno" type="number" name ="ano" class="validate">
-              <label class="active" for="txtAno">Ano</label>
+              <input id="txtArmadura" type="text" name ="armadura" class="validate">
+              <label class="active" for="txtArmadura">Armadura</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s6">
+              <input id="txtConstelacao" type="text" name ="constelacao" class="validate">
+              <label class="active" for="txtConstelacao">Constelação</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s6">
+              <input type ="number" id="txtIdade" type="text" name ="idade" class="validate">
+              <label class="active" for="txtIdade">Idade</label>
             </div>
           </div>
 

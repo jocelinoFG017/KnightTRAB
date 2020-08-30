@@ -18,50 +18,60 @@
 	 		});
 		</script>
 	</head>
+		
 	<body>		
-	  <nav>
-	    <div class="nav-wrapper container">
-	      <a href="#" class="brand-logo">CodeIgniter</a>
-	      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-	      <ul id="nav-mobile" class="right hide-on-med-and-down">
-	        <li><a href="<?=base_url('veiculo')?>">Veiculo</a></li>
-	      </ul>
-	    </div>
-	  </nav>
+	   <nav class="nav-extended black">
+            <div class="nav-wrapper">
+                <a href="home" class="brand-logo center">Saint Seiya: Knights of the Zodiac</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            </div>
+
+            <div class="nav-content">
+                <ul class="tabs tabs-transparent">
+                    <li class="tab"><a href="saint">Personagens</a></li>
+                    <li class="tab"><a class="active" href="<?=base_url('saint/formulario')?>">Cadastro</a></li>
+                </ul>
+            </div>
+        </nav>
 
 	  <ul class="sidenav" id="mobile-demo">
-	    <li><a href="veiculo">veiculo</a></li>
+	    <li><a href="<?=base_url('saint')?>">Personagens</a></li>
 	  </ul>
-        
-       <div class="container">
-        <h3>Listagem de Veiculos</h3>
+	  
+	  <div class="container">
 
-
-
-      <table class="striped">
+	  <h3>Lista de Personagens</h3>
+	  <table class="striped">
         <thead>
           <tr>
-              <th>Placa</th>
+              <th>Nome</th>
               <th>Descrição</th>
-              <th>Ano</th>
+              <th>Armadura</th>
+              <th>Constelação</th>
+              <th>Idade</th>
           </tr>
         </thead>
 
         <tbody>
-        	<?php foreach($veiculos as $vey) : ?> 
-          <tr>
-          	<td> <?=$vey['placa']?> </td>
-          	<td> <?=$vey['descricao']?> </td>
-          	<td> <?=$vey['ano']?> </td>
-          </tr>
+        	<?php foreach( $saints as $v){ ?>
+        	<tr>
+        		<td> <?=$v['nome']?> </td>
+        		<td> <?=$v['descricao']?> </td>
+        		<td> <?=$v['armadura']?> </td>
+        		<td> <?=$v['constelacao']?> </td>
+        		<td> <?=$v['idade']?> </td>
+        	</tr>
 
-          <? endforeach?>
+        	<?php } ?>
         </tbody>
       </table>
-      <a href="<?=base_url('veiculo/formulario')?>" class="right btn-floating btn-large waves-effect waves-light red">
-      	<i class="material-icons">add</i>
-      </a>
-      
+
+        <a href="<?=base_url('saint/formulario')?>" class="right btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+            
+
       </div>
+
+
+        
 	</body>
 </html>
